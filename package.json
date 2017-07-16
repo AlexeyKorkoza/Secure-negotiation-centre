@@ -20,5 +20,21 @@
   "bugs": {
     "url": "https://github.com/AlexeyKorkoza/Secure-negotiation-centre/issues"
   },
-  "homepage": "https://github.com/AlexeyKorkoza/Secure-negotiation-centre#readme"
+  "homepage": "https://github.com/AlexeyKorkoza/Secure-negotiation-centre#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "connect": "^3.6.2",
+    "connect-livereload": "^0.6.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csslint": "^1.0.0",
+    "gulp-jscpd": "0.0.8",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "page": "^1.7.1"
+  }
 }
