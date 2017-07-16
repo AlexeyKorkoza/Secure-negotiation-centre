@@ -1,0 +1,24 @@
+{
+  "name": "secure-negotiation-centre",
+  "version": "0.0.0",
+  "description": "front-end task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexeyKorkoza/Secure-negotiation-centre.git"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "js"
+  ],
+  "author": "Alexey Korkoza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexeyKorkoza/Secure-negotiation-centre/issues"
+  },
+  "homepage": "https://github.com/AlexeyKorkoza/Secure-negotiation-centre#readme"
+}
