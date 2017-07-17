@@ -15,3 +15,5 @@
 *.sublime-workspace
 
 node_modules/
+
+build/

@@ -5,7 +5,7 @@ const watch = require('gulp-watch');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const cssmin = require('gulp-minify-css');
-const refresh = require('gulp-livereload');
+const livereload = require('gulp-livereload');
 const concat = require('gulp-concat');
 const csslint = require('gulp-csslint');
 const sass = require('gulp-sass');
@@ -30,15 +30,14 @@ gulp.task('sass', () => {
 gulp.task('scripts', () => {
   return gulp.src('js/*.js')
     .on('error', console.log)
-    .pipe(concat('scripts.min.js'))
+    .pipe(concat('build.js'))
     .pipe(uglify())
     .pipe(jscpd())
-    .pipe(gulp.dest('./build/'))
-    .pipe(connect.reload());
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('styles', () => {
-  return gulp.src('css/*.css')
+  return gulp.src(['node_modules/bootstrap-grid/dist/grid.css','css/*.css'])
     .on('error', console.log)
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -46,14 +45,13 @@ gulp.task('styles', () => {
     }))
     .pipe(cssmin())
     .pipe(csslint())
-    .pipe(concat('style.min.css'))
-    .pipe(gulp.dest('./build/'))
-    .pipe(connect.reload());
+    .pipe(concat('build.css'))
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('watch', () => {
-    gulp.watch(['img/*'], ['images']);
-    gulp.watch(['sass/*'], ['sass']);
+    livereload.listen();
+    gulp.watch('sass/*', ['sass']).on('change', livereload.changed);
 });
 
 gulp.task('default', ['styles', 'sass', 'watch', 'browser-sync']);
