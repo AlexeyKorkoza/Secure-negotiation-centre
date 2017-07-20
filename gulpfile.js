@@ -5,26 +5,24 @@ const watch = require('gulp-watch');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const cssmin = require('gulp-minify-css');
-const livereload = require('gulp-livereload');
 const concat = require('gulp-concat');
 const csslint = require('gulp-csslint');
+const connect = require('gulp-connect');
 const sass = require('gulp-sass');
 const jscpd = require('gulp-jscpd');
-const browserSync = require('browser-sync');
 
-gulp.task('browser-sync', () => {
-  browserSync({
-    server: {
-      baseDir: ''
-    },
-    notify: false
+gulp.task('connect', function() {
+  connect.server({
+    root: '',
+    livereload: true
   });
 });
 
 gulp.task('sass', () => {
   gulp.src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css'))
+    .pipe(connect.reload());
 });
 
 gulp.task('scripts', () => {
@@ -33,10 +31,11 @@ gulp.task('scripts', () => {
     .pipe(concat('build.js'))
     .pipe(uglify())
     .pipe(jscpd())
-    .pipe(gulp.dest('./build/'));
+    .pipe(gulp.dest('./build/'))
+    .pipe(connect.reload());
 });
 
-gulp.task('styles', () => {
+gulp.task('css', () => {
   return gulp.src(['node_modules/bootstrap-grid/dist/grid.css','css/*.css'])
     .on('error', console.log)
     .pipe(autoprefixer({
@@ -46,12 +45,13 @@ gulp.task('styles', () => {
     .pipe(cssmin())
     .pipe(csslint())
     .pipe(concat('build.css'))
-    .pipe(gulp.dest('./build/'));
+    .pipe(gulp.dest('./build/'))
+    .pipe(connect.reload());
 });
 
 gulp.task('watch', () => {
-    livereload.listen();
-    gulp.watch('sass/*', ['sass']).on('change', livereload.changed);
+    gulp.watch('sass/*', ['sass']);
+    gulp.watch('css/*', ['css']);
 });
 
-gulp.task('default', ['styles', 'sass', 'watch', 'browser-sync']);
+gulp.task('default', ['connect', 'css', 'sass', 'watch']);
