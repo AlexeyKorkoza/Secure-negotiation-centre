@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+
+    header {
+
+        .logo {
+            position: relative;
+
+            p {
+                position: absolute;
+                bottom: -65px;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    header .container {
+        width: 901px;
+    }
+}

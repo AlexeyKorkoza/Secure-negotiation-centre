@@ -1,0 +1,48 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+header {
+    background: #f1f2f2;
+    padding: 20px 0;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(176, 176, 176, 0.4);
+
+    .welcome {
+        
+        p {
+            color: $popular_color;
+            font: 13pt $fontArialRegular;    
+        
+            .ezie {
+                font: 100 34pt $fontArialRegular; 
+            }
+
+            .unicode {
+                
+                &:after {
+                   content: '\00AE';
+                   position: relative;
+                   top: -22px;
+                   font-size: 13pt; 
+                }   
+            }
+
+            .system {
+                font: 20pt $fontArialRegular;          
+            }
+        }
+    }
+
+    .logo {
+        color: $popular_color;
+
+        p {
+          font: bold 20pt $fontSourceSansProBlack;
+        }
+    }
+}
