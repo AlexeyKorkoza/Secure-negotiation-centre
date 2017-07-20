@@ -49,9 +49,15 @@ gulp.task('css', () => {
     .pipe(connect.reload());
 });
 
+gulp.task('html', () => {
+  return gulp.src('index.html')
+    .pipe(connect.reload());
+});
+
 gulp.task('watch', () => {
     gulp.watch('sass/*', ['sass']);
     gulp.watch('css/*', ['css']);
+    gulp.watch('index.html', ['html']);
 });
 
-gulp.task('default', ['connect', 'css', 'sass', 'watch']);
+gulp.task('default', ['connect', 'html', 'css', 'sass', 'watch']);
