@@ -40,4 +40,17 @@
     main .container {
         width: 901px;
     }
+
+    main .container {
+
+        .buyer-offer,
+        .response {
+            display: inline-block;
+            width: 38.9%;
+        }
+
+        .buyer-offer {
+            margin-right: 30px;
+        }
+    }
 }

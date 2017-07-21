@@ -223,6 +223,7 @@ main {
 
     .buyer-offer {
         overflow: hidden;
+        width: auto;
         padding: 25px 40px 30px 40px;
         margin: 28px 0;
         border: 1px solid #a5a5a5;
@@ -259,7 +260,7 @@ main {
                     border: none;
                     padding: 8px 10px;
                     border-radius: 10px;
-                    font: 9pt $fontArialRegular;
+                    font: 8pt $fontArialBold;
                     color: white;
                     cursor: pointer;
 
@@ -278,7 +279,7 @@ main {
                 justify-content: flex-end;
                 float: right;
                 margin: 6px 0 0 25px;
-                font: 12pt $fontArialRegular;
+                font: 9pt $fontArialRegular;
                 color: #550066;    
 
                 .date {
@@ -288,6 +289,73 @@ main {
             }
 
         }
+    }
+
+    .response {
+      overflow: hidden;
+      padding: 25px 40px 30px 40px;
+      margin: 28px 0;
+      width: auto;
+      background: #e8e8e8;
+      border: 2px solid #ed1c24;
+      color: #ed1c24;
+
+        .heading {
+            color: #ed1c24;
+            font: bold 20pt $fontSourceSansProBlack;
+        }
+
+        .acceptance {
+            font: 15pt $fontArialBold;
+        }
+
+        .row {
+            margin: 0;
+
+            .date_time,
+            .button {
+                padding: 0;
+            }
+
+            .button {
+                
+                button {
+                    background: #aaaaaa;
+                    outline: none;
+                    border: none;
+                    margin-top: 18px;
+                    padding: 8px 10px;
+                    border-radius: 10px;
+                    font: 8pt $fontArialBold;
+                    color: white;
+                    cursor: pointer;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .date_time {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                float: right;
+                margin: 24px 0 0 25px;
+                font: 9pt $fontArialRegular;
+                color: #550066;    
+
+                .date {
+                    display: block;
+                    margin-right: 13px;
+                }
+            }
+
+        }        
+
     }
   }
 }

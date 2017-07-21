@@ -11,6 +11,13 @@
   font-style: normal;
   font-weight: normal; }
 
+@font-face {
+  font-family: "ArialBold";
+  src: url("../fonts/ArialBold.eot");
+  src: url("../fonts/ArialBold.eot?#iefix") format("embedded-opentype"), url("../fonts/ArialBold.woff") format("woff"), url("../fonts/ArialBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
 html,
 body {
   box-sizing: border-box;
@@ -151,6 +158,7 @@ main .container {
           color: #424242; }
   main .container .buyer-offer {
     overflow: hidden;
+    width: auto;
     padding: 25px 40px 30px 40px;
     margin: 28px 0;
     border: 1px solid #a5a5a5; }
@@ -175,7 +183,7 @@ main .container {
         border: none;
         padding: 8px 10px;
         border-radius: 10px;
-        font: 9pt "ArialRegular";
+        font: 8pt "ArialBold";
         color: white;
         cursor: pointer; }
         main .container .buyer-offer .row .button button:hover {
@@ -189,9 +197,53 @@ main .container {
         justify-content: flex-end;
         float: right;
         margin: 6px 0 0 25px;
-        font: 12pt "ArialRegular";
+        font: 9pt "ArialRegular";
         color: #550066; }
         main .container .buyer-offer .row .date_time .date {
+          display: block;
+          margin-right: 13px; }
+  main .container .response {
+    overflow: hidden;
+    padding: 25px 40px 30px 40px;
+    margin: 28px 0;
+    width: auto;
+    background: #e8e8e8;
+    border: 2px solid #ed1c24;
+    color: #ed1c24; }
+    main .container .response .heading {
+      color: #ed1c24;
+      font: bold 20pt "Source Sans Pro Black"; }
+    main .container .response .acceptance {
+      font: 15pt "ArialBold"; }
+    main .container .response .row {
+      margin: 0; }
+      main .container .response .row .date_time,
+      main .container .response .row .button {
+        padding: 0; }
+      main .container .response .row .button button {
+        background: #aaaaaa;
+        outline: none;
+        border: none;
+        margin-top: 18px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        font: 8pt "ArialBold";
+        color: white;
+        cursor: pointer; }
+        main .container .response .row .button button:hover {
+          cursor: pointer; }
+      main .container .response .row .date_time {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        float: right;
+        margin: 24px 0 0 25px;
+        font: 9pt "ArialRegular";
+        color: #550066; }
+        main .container .response .row .date_time .date {
           display: block;
           margin-right: 13px; }
 
@@ -216,4 +268,10 @@ main .container {
 @media (min-width: 992px) {
   header .container,
   main .container {
-    width: 901px; } }
+    width: 901px; }
+  main .container .buyer-offer,
+  main .container .response {
+    display: inline-block;
+    width: 38.9%; }
+  main .container .buyer-offer {
+    margin-right: 30px; } }
