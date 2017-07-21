@@ -108,6 +108,47 @@ main .container {
             cursor: pointer; }
             main .container .property .row .price .button_view button:hover {
               cursor: pointer; }
+  main .container .buyer-detail {
+    overflow: hidden;
+    padding: 25px 40px 30px 40px;
+    margin: 28px 0;
+    border: 1px solid #a5a5a5; }
+    main .container .buyer-detail .heading {
+      display: inline-block;
+      padding: 0;
+      width: 92%;
+      color: #550066;
+      font: bold 20pt "Source Sans Pro Black"; }
+    main .container .buyer-detail .spoiler {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px; }
+      main .container .buyer-detail .spoiler span {
+        color: #990099;
+        font: 10pt "ArialRegular";
+        cursor: pointer; }
+      main .container .buyer-detail .spoiler:hover {
+        cursor: pointer; }
+      main .container .buyer-detail .spoiler .arrow_top,
+      main .container .buyer-detail .spoiler .arrow_bottom {
+        position: absolute;
+        top: 8px;
+        right: -17px; }
+      main .container .buyer-detail .spoiler .arrow_bottom {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
+    main .container .buyer-detail .table {
+      margin-top: 10px;
+      padding-top: 25px;
+      border-top: 1px solid #acacac; }
+      main .container .buyer-detail .table table tbody tr td {
+        text-align: left;
+        font: 12pt "ArialRegular"; }
+        main .container .buyer-detail .table table tbody tr td:first-of-type {
+          color: #550066; }
+        main .container .buyer-detail .table table tbody tr td:last-of-type {
+          color: #424242; }
 
 @media (min-width: 768px) {
   header .logo {

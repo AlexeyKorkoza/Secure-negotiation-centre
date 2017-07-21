@@ -37,7 +37,9 @@ gulp.task('sass', () => {
 });
 
 gulp.task('scripts', () => {
-    return gulp.src('app/js/*.js')
+    return gulp.src([
+        'app/js/script.js'
+        ])
         .on('error', console.log)
         .pipe(concat('scripts.js'))
         .pipe(rename({ suffix: '.min', prefix: '' }))

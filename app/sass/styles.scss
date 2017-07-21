@@ -153,5 +153,72 @@ main {
         }
       }
     }
+
+    .buyer-detail {
+        overflow: hidden;
+        padding: 25px 40px 30px 40px;
+        margin: 28px 0;
+        border: 1px solid #a5a5a5;
+
+        .heading {
+            display: inline-block;
+            padding: 0;
+            width: 92%;
+            color: #550066;
+            font: bold 20pt $fontSourceSansProBlack;
+        }    
+
+        .spoiler {
+            position: relative;
+            display: inline-block;
+            margin-top: 10px;
+
+            span {
+                color: #990099;
+                font: 10pt $fontArialRegular;
+                cursor: pointer;
+            }
+
+            &:hover {
+               cursor: pointer;
+            }
+
+            .arrow_top,
+            .arrow_bottom {
+                position: absolute;
+                top: 8px;
+                right: -17px;
+            }
+
+            .arrow_bottom {
+                -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }               
+        }
+
+        .table {
+            margin-top: 10px;
+            padding-top: 25px;
+            border-top: 1px solid #acacac;
+
+            table tbody tr {
+
+                td {
+                    text-align: left;
+                    font: 12pt $fontArialRegular;
+                    
+                    &:first-of-type {
+                       color: #550066;
+                    }
+
+                    &:last-of-type {
+                       color: #424242; 
+                    }
+                }    
+                
+            }
+        }
+    }
   }
 }
