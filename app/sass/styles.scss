@@ -220,5 +220,74 @@ main {
             }
         }
     }
+
+    .buyer-offer {
+        overflow: hidden;
+        padding: 25px 40px 30px 40px;
+        margin: 28px 0;
+        border: 1px solid #a5a5a5;
+
+        .heading {
+            color: #550066;
+            font: bold 20pt $fontSourceSansProBlack;
+        }
+
+        .cost {
+            font: bold 20pt $fontSourceSansProBlack;
+        }
+
+        .subject {
+            display: block;
+            margin: 10px 0 18px 0;
+            color: #424242;
+            font: 8pt $fontArialRegular;
+        }
+
+        .row {
+            margin: 0;
+
+            .date_time,
+            .button {
+                padding: 0;
+            }
+
+            .button {
+                
+                button {
+                    background: #aaaaaa;
+                    outline: none;
+                    border: none;
+                    padding: 8px 10px;
+                    border-radius: 10px;
+                    font: 9pt $fontArialRegular;
+                    color: white;
+                    cursor: pointer;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .date_time {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                float: right;
+                margin: 6px 0 0 25px;
+                font: 12pt $fontArialRegular;
+                color: #550066;    
+
+                .date {
+                    display: block;
+                    margin-right: 13px;
+                }
+            }
+
+        }
+    }
   }
 }

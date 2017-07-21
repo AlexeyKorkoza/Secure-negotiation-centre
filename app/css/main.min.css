@@ -149,6 +149,51 @@ main .container {
           color: #550066; }
         main .container .buyer-detail .table table tbody tr td:last-of-type {
           color: #424242; }
+  main .container .buyer-offer {
+    overflow: hidden;
+    padding: 25px 40px 30px 40px;
+    margin: 28px 0;
+    border: 1px solid #a5a5a5; }
+    main .container .buyer-offer .heading {
+      color: #550066;
+      font: bold 20pt "Source Sans Pro Black"; }
+    main .container .buyer-offer .cost {
+      font: bold 20pt "Source Sans Pro Black"; }
+    main .container .buyer-offer .subject {
+      display: block;
+      margin: 10px 0 18px 0;
+      color: #424242;
+      font: 8pt "ArialRegular"; }
+    main .container .buyer-offer .row {
+      margin: 0; }
+      main .container .buyer-offer .row .date_time,
+      main .container .buyer-offer .row .button {
+        padding: 0; }
+      main .container .buyer-offer .row .button button {
+        background: #aaaaaa;
+        outline: none;
+        border: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+        font: 9pt "ArialRegular";
+        color: white;
+        cursor: pointer; }
+        main .container .buyer-offer .row .button button:hover {
+          cursor: pointer; }
+      main .container .buyer-offer .row .date_time {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        float: right;
+        margin: 6px 0 0 25px;
+        font: 12pt "ArialRegular";
+        color: #550066; }
+        main .container .buyer-offer .row .date_time .date {
+          display: block;
+          margin-right: 13px; }
 
 @media (min-width: 768px) {
   header .logo {
