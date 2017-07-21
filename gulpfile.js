@@ -16,42 +16,47 @@ const del = require('del');
 const cssnano = require('gulp-cssnano')
 
 gulp.task('connect', function() {
-  connect.server({
-    root: 'app',
-    livereload: true
-  });
+    connect.server({
+        root: 'app',
+        livereload: true
+    });
 });
 
 gulp.task('sass', () => {
-  return gulp.src('app/sass/**/*.scss')
-    .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
+    return gulp.src([
+        'app/sass/_*.scss',
+        'app/sass/fonts.scss',
+        'app/sass/styles.scss',
+        'app/sass/media.scss'    
+    ])
+    .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
     .pipe(concat('main.css'))
-    .pipe(rename({suffix: '.min', prefix : ''}))
+    .pipe(rename({ suffix: '.min', prefix: '' }))
     .pipe(gulp.dest('app/css'))
     .pipe(connect.reload());
 });
 
 gulp.task('scripts', () => {
-  return gulp.src('app/js/*.js')
-    .on('error', console.log)
-    .pipe(concat('scripts.js'))
-    .pipe(rename({suffix: '.min', prefix : ''}))
-    .pipe(uglify())
-    .pipe(jscpd())
-    .pipe(gulp.dest('app/js'))
-    .pipe(connect.reload());
+    return gulp.src('app/js/*.js')
+        .on('error', console.log)
+        .pipe(concat('scripts.js'))
+        .pipe(rename({ suffix: '.min', prefix: '' }))
+        .pipe(uglify())
+        .pipe(jscpd())
+        .pipe(gulp.dest('app/js'))
+        .pipe(connect.reload());
 });
 
 gulp.task('css-libs', () => {
     return gulp.src(['app/libs/grid.min.css'])
         .pipe(concat('libs.css'))
-        .pipe(rename({suffix: '.min', prefix : ''}))
+        .pipe(rename({ suffix: '.min', prefix: '' }))
         .pipe(gulp.dest('app/css'));
 });
 
 gulp.task('html', () => {
-  return gulp.src('app/index.html')
-    .pipe(connect.reload());
+    return gulp.src('app/index.html')
+        .pipe(connect.reload());
 });
 
 gulp.task('watch', ['css-libs', 'scripts'], () => {
@@ -63,19 +68,19 @@ gulp.task('watch', ['css-libs', 'scripts'], () => {
 gulp.task('build', ['clean', 'sass', 'scripts'], () => {
 
     var buildCss = gulp.src([
-        'app/css/*'
-    ])
-    .pipe(cssnano())    
-    .pipe(gulp.dest('dist/css'))
+            'app/css/*'
+        ])
+        .pipe(cssnano())
+        .pipe(gulp.dest('dist/css'))
 
     var buildFonts = gulp.src('app/fonts/*')
-    .pipe(gulp.dest('dist/fonts'))
+        .pipe(gulp.dest('dist/fonts'))
 
     var buildJs = gulp.src('app/js/*.js')
-    .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('dist/js'))
 
     var buildHtml = gulp.src('app/*.html')
-    .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'));
 
 });
 

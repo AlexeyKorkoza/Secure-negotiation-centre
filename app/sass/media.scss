@@ -1,10 +1,9 @@
 @media (min-width: 768px) {
-
     header {
-
+        
         .logo {
             position: relative;
-
+         
             p {
                 position: absolute;
                 top: 28px;
@@ -12,11 +11,33 @@
         }
     }
 
+    main .container {
+
+        .property .row {
+            margin-right: 0;
+
+            .address .row { 
+
+                .text {
+                    margin-left: 45px;
+                }
+            }
+
+            .price {
+                -webkit-box-align: end;
+                -ms-flex-align: end;
+                align-items: flex-end;
+                width: 33%;
+                float: right;
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 @media (min-width: 992px) {
-
-    header .container {
+    header .container,
+    main .container {
         width: 901px;
     }
 }

@@ -11,17 +11,6 @@
   font-style: normal;
   font-weight: normal; }
 
-@media (min-width: 768px) {
-  header .logo {
-    position: relative; }
-    header .logo p {
-      position: absolute;
-      top: 28px; } }
-
-@media (min-width: 992px) {
-  header .container {
-    width: 901px; } }
-
 html,
 body {
   box-sizing: border-box;
@@ -62,3 +51,83 @@ main .container {
       main .container .status p span {
         margin-left: 5px;
         font: 20pt "ArialRegular"; }
+  main .container .property {
+    border: 1px solid #990099;
+    padding: 25px 40px; }
+    main .container .property h1 {
+      color: #550066;
+      font: bold 17pt "Source Sans Pro Black"; }
+    main .container .property hr {
+      display: block;
+      margin-bottom: 25px;
+      color: #acacac; }
+    main .container .property .row {
+      margin: 0; }
+      main .container .property .row .address {
+        padding: 0; }
+        main .container .property .row .address .row {
+          margin: 0; }
+          main .container .property .row .address .row .image {
+            padding: 0; }
+          main .container .property .row .address .row .text {
+            display: table;
+            margin: 10px 0 0 0;
+            padding: 0;
+            color: #550066;
+            font: bold 16pt "Source Sans Pro Black";
+            line-height: 20px; }
+      main .container .property .row .price {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+        margin-top: 10px;
+        padding: 0; }
+        main .container .property .row .price .asking {
+          font: 10pt "ArialRegular";
+          color: #6a2079; }
+        main .container .property .row .price .cost {
+          font: bold 17pt "Source Sans Pro Black";
+          color: #550066; }
+        main .container .property .row .price .button_view {
+          margin-top: 5px; }
+          main .container .property .row .price .button_view button {
+            background: #aaaaaa;
+            outline: none;
+            border: none;
+            padding: 8px 10px;
+            border-radius: 10px;
+            font: 9pt "ArialRegular";
+            color: white;
+            cursor: pointer; }
+            main .container .property .row .price .button_view button:hover {
+              cursor: pointer; }
+
+@media (min-width: 768px) {
+  header .logo {
+    position: relative; }
+    header .logo p {
+      position: absolute;
+      top: 28px; }
+  main .container .property .row {
+    margin-right: 0; }
+    main .container .property .row .address .row .text {
+      margin-left: 45px; }
+    main .container .property .row .price {
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      width: 33%;
+      float: right;
+      margin-top: 0; } }
+
+@media (min-width: 992px) {
+  header .container,
+  main .container {
+    width: 901px; } }

@@ -9,65 +9,149 @@ body {
 }
 
 header {
-    background: #f1f2f2;
-    padding: 20px 0;
-    overflow: hidden;
-    box-shadow: 0 5px 5px rgba(176, 176, 176, 0.4);
+  background: #f1f2f2;
+  padding: 20px 0;
+  overflow: hidden;
+  box-shadow: 0 5px 5px rgba(176, 176, 176, 0.4);
 
-    .welcome {
-        
-        p {
-            color: $popular_color;
-            font: 13pt $fontArialRegular;    
-        
-            .ezie {
-                font: 100 34pt $fontArialRegular; 
-            }
+  .welcome {
 
-            .unicode {
-                
-                &:after {
-                   content: '\00AE';
-                   position: relative;
-                   top: -22px;
-                   font-size: 13pt; 
-                }   
-            }
+    p {
+      color: $popular_color;
+      font: 13pt $fontArialRegular;
 
-            .system {
-                font: 20pt $fontArialRegular;          
-            }
+      .ezie {
+        font: 100 34pt $fontArialRegular;
+      }
+
+      .unicode {
+
+        &:after {
+          content: '\00AE';
+          position: relative;
+          top: -22px;
+          font-size: 13pt;
         }
-    }
+      }
 
-    .logo {
-        color: $popular_color;
-
-        p {
-          font: bold 20pt $fontSourceSansProBlack;
-        }
+      .system {
+        font: 20pt $fontArialRegular;
+      }
     }
+  }
+  .logo {
+    color: $popular_color;
+
+    p {
+      font: bold 20pt $fontSourceSansProBlack;
+    }
+  }
 }
 
 main {
 
-    .container {
-        margin-top: 41px;
-    
-        .status {
-            background: #ed1c24;
-            padding: 7px 0 11px 43px;
-            margin-bottom: 10px;
-        
-            p {
-                color: white;
-                font: bold 17pt $fontSourceSansProBlack;
+  .container {
+    margin-top: 41px;
 
-                span {
-                    margin-left: 5px;
-                    font: 20pt $fontArialRegular; 
-                }
-            } 
+    .status {
+      background: #ed1c24;
+      padding: 7px 0 11px 43px;
+      margin-bottom: 10px;
+
+      p {
+        color: white;
+        font: bold 17pt $fontSourceSansProBlack;
+
+        span {
+          margin-left: 5px;
+          font: 20pt $fontArialRegular;
         }
+      }
     }
+
+    .property {
+      border: 1px solid #990099;
+      padding: 25px 40px;
+
+      h1 {
+        color: #550066;
+        font: bold 17pt $fontSourceSansProBlack;
+      }
+
+      hr {
+        display: block;
+        margin-bottom: 25px;
+        color: #acacac;
+      }
+
+      .row {
+        margin: 0;
+
+        .address {
+          padding: 0;
+
+          .row {
+            margin: 0;
+
+            .image {
+              padding: 0;
+            }
+
+            .text {
+              display: table;
+              margin: 10px 0 0 0;
+              padding: 0;
+              color: #550066;
+              font: bold 16pt $fontSourceSansProBlack;
+              line-height: 20px;
+            }
+          }
+        }
+
+        .price {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+          align-items: baseline;
+          margin-top: 10px;
+          padding: 0;
+
+          .asking {
+            font: 10pt $fontArialRegular;
+            color: $popular_color;
+          }
+
+          .cost {
+            font: bold 17pt $fontSourceSansProBlack;
+            color: #550066;
+          }
+
+          .button_view {
+            margin-top: 5px;
+
+            button {
+              background: #aaaaaa;
+              outline: none;
+              border: none;
+              padding: 8px 10px;
+              border-radius: 10px;
+              font: 9pt $fontArialRegular;
+              color: white;
+              cursor: pointer;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
