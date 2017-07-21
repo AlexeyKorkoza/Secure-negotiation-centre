@@ -49,3 +49,16 @@ header {
     color: #6a2079; }
     header .logo p {
       font: bold 20pt "Source Sans Pro Black"; }
+
+main .container {
+  margin-top: 41px; }
+  main .container .status {
+    background: #ed1c24;
+    padding: 7px 0 11px 43px;
+    margin-bottom: 10px; }
+    main .container .status p {
+      color: white;
+      font: bold 17pt "Source Sans Pro Black"; }
+      main .container .status p span {
+        margin-left: 5px;
+        font: 20pt "ArialRegular"; }

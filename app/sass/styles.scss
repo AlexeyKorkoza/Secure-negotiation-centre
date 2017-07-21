@@ -48,3 +48,26 @@ header {
         }
     }
 }
+
+main {
+
+    .container {
+        margin-top: 41px;
+    
+        .status {
+            background: #ed1c24;
+            padding: 7px 0 11px 43px;
+            margin-bottom: 10px;
+        
+            p {
+                color: white;
+                font: bold 17pt $fontSourceSansProBlack;
+
+                span {
+                    margin-left: 5px;
+                    font: 20pt $fontArialRegular; 
+                }
+            } 
+        }
+    }
+}
