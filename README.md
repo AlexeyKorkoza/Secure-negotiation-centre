@@ -1,5 +1,23 @@
 # Secure-negotiation-centre
 
+## How to run ?
+
+Clone a repository
+```
+https://github.com/AlexeyKorkoza/Secure-negotiation-centre.git
+```
+Install
+```
+Npm install or yarn install
+```
+Development
+```
+Gulp
+```
+Production
+```
+Gulp build
+```
 # Task
 
 To convert the supplied PSD file to HTML/CSS/JS.
