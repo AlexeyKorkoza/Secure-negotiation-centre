@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Source Sans Pro Black";
+  src: url("../fonts/SourceSansPro-Black.eot?") format("eot"), url("../fonts/SourceSansPro-Black.woff") format("woff"), url("../fonts/SourceSansPro-Black.ttf") format("truetype"), url("../fonts/SourceSansPro-Black.svg#SourceSansPro-Black") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ArialRegular";
+  src: url("../fonts/ArialRegular.eot");
+  src: url("../fonts/ArialRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ArialRegular.woff") format("woff"), url("../fonts/ArialRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@media (min-width: 768px) {
+  header .logo {
+    position: relative; }
+    header .logo p {
+      position: absolute;
+      top: 28px; } }
+
+@media (min-width: 992px) {
+  header .container {
+    width: 901px; } }
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+header {
+  background: #f1f2f2;
+  padding: 20px 0;
+  overflow: hidden;
+  box-shadow: 0 5px 5px rgba(176, 176, 176, 0.4); }
+  header .welcome p {
+    color: #6a2079;
+    font: 13pt "ArialRegular"; }
+    header .welcome p .ezie {
+      font: 100 34pt "ArialRegular"; }
+    header .welcome p .unicode:after {
+      content: '\00AE';
+      position: relative;
+      top: -22px;
+      font-size: 13pt; }
+    header .welcome p .system {
+      font: 20pt "ArialRegular"; }
+  header .logo {
+    color: #6a2079; }
+    header .logo p {
+      font: bold 20pt "Source Sans Pro Black"; }
