@@ -357,5 +357,149 @@ main {
         }        
 
     }
+
+    .re_open {
+      overflow: hidden;
+      padding: 25px 40px;
+      margin-bottom: 131px;
+      border: 1px solid #990099;
+
+      .heading {
+        color: #550066;
+        font: bold 20pt $fontSourceSansProBlack;  
+      }
+
+      hr {
+        display: block;
+        margin-bottom: 25px;
+        color: #acacac;
+      }
+
+      .negotiate {
+        margin: 0;
+        padding: 29px;
+        border: 1px solid #acacac;
+
+        .text,
+        .button {
+          padding: 0;
+        }
+
+        .text {
+          color: #550066;
+          font: 13pt $fontArialBold;
+        }
+
+        .button {
+          margin-top: 16px; 
+
+          button {
+              float: left;
+              background: #990099;
+              outline: none;
+              border: none;
+              padding: 10px;
+              border-radius: 10px;
+              font: bold 10pt $fontArialRegular;
+              color: white;
+              cursor: pointer;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+      }
+
+      .offer {
+        margin: 0 0 16px 0;
+
+        p {
+          display: block;
+          margin-bottom: 16px;
+          color: #550066;
+          font: bold 13pt $fontSourceSansProBlack;
+        }
+
+        .input,
+        .submit {
+          padding: 0;
+        }
+
+        .input {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-bottom: 16px;
+
+          .pound {
+            color: #979797;
+            font: 34pt $fontArialBold;
+          }
+
+          input {
+            display: block;
+            width: 90%;
+            margin-left: 8px;
+            padding-left: 10px;
+            border-radius: 10px;
+            border: 1px solid #979797;
+            font: 23pt $fontArialBold;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        .submit {
+
+          button {
+            float: left;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            padding: 10px 13px;
+            font: 17pt $fontArialBold;
+            background: #00aeef;
+            color: white;
+            cursor: pointer;
+
+            &:hover {
+              cursor: pointer;
+              border: none;
+              outline: none;
+            }
+
+            &:focus {
+              border: none;
+              outline: none;
+            }
+          }
+        }
+      }
+
+      .add_comments {
+
+        button {
+          outline: none;
+          border: none;
+          padding: 8px 10px;
+          margin-left: 30px;
+          border-radius: 10px;
+          background: #990099;
+          color: white;
+          font: 11pt $fontArialBold;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }

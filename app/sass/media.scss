@@ -32,6 +32,31 @@
                 margin-top: 0;
             }
         }
+
+        .re_open {
+
+            .negotiate {
+
+                .button {
+
+                    button {
+                        float: right;
+                        position: relative;
+                        top: -10px;
+                    }
+                }
+            }
+
+            .offer {
+
+                .submit {
+
+                    button {
+                        float: right;
+                    }
+                }
+            }
+        }
     }
 }
 
