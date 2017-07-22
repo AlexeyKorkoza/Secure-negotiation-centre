@@ -341,6 +341,46 @@ main .container {
       main .container .re_open .add_comments button:hover {
         cursor: pointer; }
 
+footer .navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background: #545353;
+  border: none; }
+  footer .navbar .navbar-toggle {
+    float: left;
+    margin-left: 10px; }
+  footer .navbar .navbar-header,
+  footer .navbar .socials {
+    display: inline-block !important; }
+  footer .navbar .collapse .navbar-nav a {
+    color: white;
+    font: 13pt "ArialRegular"; }
+  footer .navbar .socials {
+    width: 70%;
+    float: right; }
+    footer .navbar .socials .navbar-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      float: right; }
+      footer .navbar .socials .navbar-nav i {
+        color: #bbbabb;
+        cursor: pointer; }
+        footer .navbar .socials .navbar-nav i:hover {
+          color: white;
+          cursor: pointer;
+          -webkit-transform: rotate(-360deg);
+          -ms-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+          -webkit-transition: transform 0.6s;
+          -ms-transition: transform 0.6s;
+          -o-transition: transform 0.6s;
+          transition: transform 0.6s; }
+
 @media (min-width: 768px) {
   header .logo {
     position: relative; }
@@ -363,7 +403,12 @@ main .container {
     position: relative;
     top: -10px; }
   main .container .re_open .offer .submit button {
-    float: right; } }
+    float: right; }
+  footer .collapse .navbar-nav {
+    margin-top: 11px; }
+    footer .collapse .navbar-nav a {
+      padding: 0px 15px;
+      border-right: 1px solid white; } }
 
 @media (min-width: 992px) {
   header .container,
@@ -374,4 +419,11 @@ main .container {
     display: inline-block;
     width: 38.9%; }
   main .container .buyer-offer {
-    margin-right: 30px; } }
+    margin-right: 30px; }
+  footer .navbar #myNavbar,
+  footer .navbar .socials {
+    display: inline-block !important; }
+  footer .navbar #myNavbar {
+    width: 70%; }
+  footer .navbar .socials {
+    width: 25%; } }

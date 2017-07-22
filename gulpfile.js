@@ -38,6 +38,7 @@ gulp.task('sass', () => {
 
 gulp.task('scripts', () => {
     return gulp.src([
+        'app/libs/bootstrap.min.js',
         'app/js/script.js'
         ])
         .on('error', console.log)
@@ -50,7 +51,9 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('css-libs', () => {
-    return gulp.src(['app/libs/grid.min.css'])
+    return gulp.src([
+        'app/libs/bootstrap.min.css',
+        ])
         .pipe(concat('libs.css'))
         .pipe(rename({ suffix: '.min', prefix: '' }))
         .pipe(gulp.dest('app/css'));

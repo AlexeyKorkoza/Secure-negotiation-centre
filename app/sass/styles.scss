@@ -503,3 +503,67 @@ main {
     }
   }
 }
+
+footer {
+
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background: #545353;
+    border: none;
+
+    .navbar-toggle {
+      float: left;
+      margin-left: 10px;
+    }
+
+    .navbar-header,
+    .socials {
+      display: inline-block !important;
+    }
+
+    .collapse {
+
+      .navbar-nav {
+      
+        a {
+          color: white;
+          font: 13pt $fontArialRegular;
+        }
+      }
+    }
+
+    .socials {
+      width: 70%;
+      float: right;
+
+      .navbar-nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        float: right;
+
+        i {
+          color: #bbbabb;
+          cursor: pointer;
+
+          &:hover {
+            color: white;
+            cursor: pointer;
+            -webkit-transform: rotate(-360deg);
+            -ms-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+            -webkit-transition: transform 0.6s;
+            -ms-transition: transform 0.6s;
+            -o-transition: transform 0.6s;
+            transition: transform 0.6s;
+          }
+        }
+      }
+  }
+}
+}

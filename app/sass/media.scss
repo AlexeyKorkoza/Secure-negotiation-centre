@@ -58,6 +58,21 @@
             }
         }
     }
+
+    footer {
+
+        .collapse {
+
+            .navbar-nav {
+                margin-top: 11px;
+
+                a {
+                    padding: 0px 15px;
+                    border-right: 1px solid white;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 992px) {
@@ -76,6 +91,25 @@
 
         .buyer-offer {
             margin-right: 30px;
+        }
+    }
+
+    footer {
+
+        .navbar {
+
+            #myNavbar,
+            .socials {
+                display: inline-block !important;
+            }
+
+            #myNavbar {
+                width: 70%;
+            }
+
+            .socials {
+                width: 25%;
+            }
         }
     }
 }
