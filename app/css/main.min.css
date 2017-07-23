@@ -29,24 +29,28 @@ header {
   padding: 20px 0;
   overflow: hidden;
   box-shadow: 0 5px 5px rgba(176, 176, 176, 0.4); }
-  header .welcome p {
-    color: #6a2079;
-    font: 13pt "ArialRegular"; }
-    header .welcome p .ezie {
-      font: 100 34pt "ArialRegular"; }
-    header .welcome p .unicode:after {
-      content: '\00AE';
-      position: relative;
-      top: -22px;
-      font-size: 13pt; }
-    header .welcome p .system {
-      font: 20pt "ArialRegular"; }
+  header .welcome {
+    padding: 0; }
+    header .welcome p {
+      color: #6a2079;
+      font: 13pt "ArialRegular"; }
+      header .welcome p .ezie {
+        font: 100 34pt "ArialRegular"; }
+      header .welcome p .unicode:after {
+        content: '\00AE';
+        position: relative;
+        top: -22px;
+        font-size: 13pt; }
+      header .welcome p .system {
+        font: 20pt "ArialRegular"; }
   header .logo {
     color: #6a2079; }
     header .logo p {
       font: bold 20pt "Source Sans Pro Black"; }
 
 main .container {
+  padding-left: 0;
+  padding-right: 0;
   margin-top: 41px; }
   main .container .status {
     background: #ed1c24;
@@ -67,7 +71,7 @@ main .container {
     main .container .property hr {
       display: block;
       margin-bottom: 25px;
-      color: #acacac; }
+      border-top: 1px solid #acacac; }
     main .container .property .row {
       margin: 0; }
       main .container .property .row .address {
@@ -135,6 +139,7 @@ main .container {
         font: 10pt "ArialRegular";
         cursor: pointer; }
       main .container .buyer-detail .spoiler:hover {
+        text-decoration: none;
         cursor: pointer; }
       main .container .buyer-detail .spoiler .arrow_top,
       main .container .buyer-detail .spoiler .arrow_bottom {
@@ -156,96 +161,102 @@ main .container {
           color: #550066; }
         main .container .buyer-detail .table table tbody tr td:last-of-type {
           color: #424242; }
-  main .container .buyer-offer {
-    overflow: hidden;
-    width: auto;
-    padding: 25px 40px 30px 40px;
-    margin: 28px 0;
-    border: 1px solid #a5a5a5; }
-    main .container .buyer-offer .heading {
-      color: #550066;
-      font: bold 20pt "Source Sans Pro Black"; }
-    main .container .buyer-offer .cost {
-      font: bold 20pt "Source Sans Pro Black"; }
-    main .container .buyer-offer .subject {
-      display: block;
-      margin: 10px 0 18px 0;
-      color: #424242;
-      font: 8pt "ArialRegular"; }
-    main .container .buyer-offer .row {
-      margin: 0; }
-      main .container .buyer-offer .row .date_time,
-      main .container .buyer-offer .row .button {
-        padding: 0; }
-      main .container .buyer-offer .row .button button {
-        background: #aaaaaa;
-        outline: none;
-        border: none;
-        padding: 8px 10px;
-        border-radius: 10px;
-        font: 8pt "ArialBold";
-        color: white;
-        cursor: pointer; }
-        main .container .buyer-offer .row .button button:hover {
+  main .container .buyer-offer-response {
+    margin: 0; }
+    main .container .buyer-offer-response .buyer-offer {
+      overflow: hidden;
+      width: auto;
+      padding: 25px 40px 30px 40px;
+      margin: 28px 0;
+      border: 1px solid #a5a5a5; }
+      main .container .buyer-offer-response .buyer-offer .heading {
+        color: #550066;
+        font: bold 20pt "Source Sans Pro Black"; }
+      main .container .buyer-offer-response .buyer-offer hr {
+        border-top: 1px solid #acacac; }
+      main .container .buyer-offer-response .buyer-offer .cost {
+        font: bold 20pt "Source Sans Pro Black"; }
+      main .container .buyer-offer-response .buyer-offer .subject {
+        display: block;
+        margin: 10px 0 18px 0;
+        color: #424242;
+        font: 8pt "ArialRegular"; }
+      main .container .buyer-offer-response .buyer-offer .row {
+        margin: 0; }
+        main .container .buyer-offer-response .buyer-offer .row .date_time,
+        main .container .buyer-offer-response .buyer-offer .row .button {
+          padding: 0; }
+        main .container .buyer-offer-response .buyer-offer .row .button button {
+          background: #aaaaaa;
+          outline: none;
+          border: none;
+          padding: 8px 10px;
+          border-radius: 10px;
+          font: 8pt "ArialBold";
+          color: white;
           cursor: pointer; }
-      main .container .buyer-offer .row .date_time {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-        float: right;
-        margin: 6px 0 0 25px;
-        font: 9pt "ArialRegular";
-        color: #550066; }
-        main .container .buyer-offer .row .date_time .date {
-          display: block;
-          margin-right: 13px; }
-  main .container .response {
-    overflow: hidden;
-    padding: 25px 40px 30px 40px;
-    margin: 28px 0;
-    width: auto;
-    background: #e8e8e8;
-    border: 2px solid #ed1c24;
-    color: #ed1c24; }
-    main .container .response .heading {
-      color: #ed1c24;
-      font: bold 20pt "Source Sans Pro Black"; }
-    main .container .response .acceptance {
-      font: 15pt "ArialBold"; }
-    main .container .response .row {
-      margin: 0; }
-      main .container .response .row .date_time,
-      main .container .response .row .button {
-        padding: 0; }
-      main .container .response .row .button button {
-        background: #aaaaaa;
-        outline: none;
-        border: none;
-        margin-top: 18px;
-        padding: 8px 10px;
-        border-radius: 10px;
-        font: 8pt "ArialBold";
-        color: white;
-        cursor: pointer; }
-        main .container .response .row .button button:hover {
+          main .container .buyer-offer-response .buyer-offer .row .button button:hover {
+            cursor: pointer; }
+        main .container .buyer-offer-response .buyer-offer .row .date_time {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+          -ms-flex-pack: end;
+          justify-content: flex-end;
+          float: right;
+          margin: 6px 0 0 25px;
+          font: 9pt "ArialRegular";
+          color: #550066; }
+          main .container .buyer-offer-response .buyer-offer .row .date_time .date {
+            display: block;
+            margin-right: 13px; }
+    main .container .buyer-offer-response .response {
+      overflow: hidden;
+      padding: 25px 40px 30px 40px;
+      margin: 28px 0;
+      width: auto;
+      background: #e8e8e8;
+      border: 2px solid #ed1c24;
+      color: #ed1c24; }
+      main .container .buyer-offer-response .response .heading {
+        color: #ed1c24;
+        font: bold 20pt "Source Sans Pro Black"; }
+      main .container .buyer-offer-response .response hr {
+        border-top: 1px solid #acacac; }
+      main .container .buyer-offer-response .response .acceptance {
+        font: 16pt "ArialBold"; }
+      main .container .buyer-offer-response .response .row {
+        margin: 0; }
+        main .container .buyer-offer-response .response .row .date_time,
+        main .container .buyer-offer-response .response .row .button {
+          padding: 0; }
+        main .container .buyer-offer-response .response .row .button button {
+          background: #aaaaaa;
+          outline: none;
+          border: none;
+          margin-top: 18px;
+          padding: 8px 10px;
+          border-radius: 10px;
+          font: 8pt "ArialBold";
+          color: white;
           cursor: pointer; }
-      main .container .response .row .date_time {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-        float: right;
-        margin: 24px 0 0 25px;
-        font: 9pt "ArialRegular";
-        color: #550066; }
-        main .container .response .row .date_time .date {
-          display: block;
-          margin-right: 13px; }
+          main .container .buyer-offer-response .response .row .button button:hover {
+            cursor: pointer; }
+        main .container .buyer-offer-response .response .row .date_time {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+          -ms-flex-pack: end;
+          justify-content: flex-end;
+          float: right;
+          margin: 24px 0 0 25px;
+          font: 9pt "ArialRegular";
+          color: #550066; }
+          main .container .buyer-offer-response .response .row .date_time .date {
+            display: block;
+            margin-right: 13px; }
   main .container .re_open {
     overflow: hidden;
     padding: 25px 40px;
@@ -257,7 +268,7 @@ main .container {
     main .container .re_open hr {
       display: block;
       margin-bottom: 25px;
-      color: #acacac; }
+      border-top: 1px solid #acacac; }
     main .container .re_open .negotiate {
       margin: 0;
       padding: 29px;
@@ -341,51 +352,61 @@ main .container {
       main .container .re_open .add_comments button:hover {
         cursor: pointer; }
 
-footer .navbar {
-  margin-bottom: 0;
-  border-radius: 0;
-  background: #545353;
-  border: none; }
-  footer .navbar .navbar-toggle {
-    float: left;
-    margin-left: 10px; }
-  footer .navbar .navbar-header,
-  footer .navbar .socials {
-    display: inline-block !important; }
-  footer .navbar .collapse .navbar-nav a {
-    color: white;
-    font: 13pt "ArialRegular"; }
-  footer .navbar .socials {
-    width: 70%;
-    float: right; }
-    footer .navbar .socials .navbar-nav {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      float: right; }
-      footer .navbar .socials .navbar-nav i {
-        color: #bbbabb;
-        cursor: pointer; }
-        footer .navbar .socials .navbar-nav i:hover {
+footer {
+  background: #545353; }
+  footer .navbar {
+    background: #545353;
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none; }
+    footer .navbar .container-fluid {
+      padding: 0; }
+      footer .navbar .container-fluid .navbar-toggle {
+        float: left;
+        margin-left: 10px; }
+      footer .navbar .container-fluid .navbar-header,
+      footer .navbar .container-fluid .socials {
+        display: inline-block !important; }
+      footer .navbar .container-fluid .collapse {
+        padding: 0; }
+        footer .navbar .container-fluid .collapse .navbar-nav a {
           color: white;
-          cursor: pointer;
-          -webkit-transform: rotate(-360deg);
-          -ms-transform: rotate(-360deg);
-          transform: rotate(-360deg);
-          -webkit-transition: transform 0.6s;
-          -ms-transition: transform 0.6s;
-          -o-transition: transform 0.6s;
-          transition: transform 0.6s; }
+          font: 11pt "ArialRegular"; }
+      footer .navbar .container-fluid .socials {
+        width: 70%;
+        float: right; }
+        footer .navbar .container-fluid .socials .navbar-nav {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          float: right; }
+          footer .navbar .container-fluid .socials .navbar-nav a {
+            font-size: 16pt;
+            margin-top: -7px; }
+            footer .navbar .container-fluid .socials .navbar-nav a i {
+              color: #bbbabb;
+              cursor: pointer; }
+              footer .navbar .container-fluid .socials .navbar-nav a i:hover {
+                color: white;
+                cursor: pointer;
+                -webkit-transform: rotate(-360deg);
+                -ms-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+                -webkit-transition: transform 0.6s;
+                -ms-transition: transform 0.6s;
+                -o-transition: transform 0.6s;
+                transition: transform 0.6s; }
 
 @media (min-width: 768px) {
   header .logo {
     position: relative; }
     header .logo p {
       position: absolute;
+      right: 0;
       top: 28px; }
   main .container .property .row {
     margin-right: 0; }
@@ -406,24 +427,28 @@ footer .navbar {
     float: right; }
   footer .collapse .navbar-nav {
     margin-top: 11px; }
-    footer .collapse .navbar-nav a {
+    footer .collapse .navbar-nav li a {
       padding: 0px 15px;
-      border-right: 1px solid white; } }
+      border-right: 1px solid white; }
+    footer .collapse .navbar-nav li:first-of-type a {
+      padding-left: 0 !important; } }
 
 @media (min-width: 992px) {
   header .container,
-  main .container {
+  main .container,
+  footer .container {
     width: 901px; }
-  main .container .buyer-offer,
-  main .container .response {
-    display: inline-block;
-    width: 38.9%; }
-  main .container .buyer-offer {
+  main .container .buyer-offer-response .buyer-offer,
+  main .container .buyer-offer-response .response {
+    width: 435px; }
+  main .container .buyer-offer-response .buyer-offer {
     margin-right: 30px; }
-  footer .navbar #myNavbar,
-  footer .navbar .socials {
-    display: inline-block !important; }
-  footer .navbar #myNavbar {
-    width: 70%; }
-  footer .navbar .socials {
-    width: 25%; } }
+  footer .container {
+    padding: 0; }
+    footer .container .navbar .container-fluid #myNavbar,
+    footer .container .navbar .container-fluid .socials {
+      display: inline-block !important; }
+    footer .container .navbar .container-fluid #myNavbar {
+      width: 70%; }
+    footer .container .navbar .container-fluid .socials {
+      width: 25%; } }

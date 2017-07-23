@@ -1,115 +1,130 @@
 @media (min-width: 768px) {
-    header {
-        
-        .logo {
+  header {
+
+    .logo {
+      position: relative;
+
+      p {
+        position: absolute;
+        right: 0;
+        top: 28px;
+      }
+    }
+  }
+
+  main .container {
+
+    .property .row {
+      margin-right: 0;
+
+      .address .row {
+
+        .text {
+          margin-left: 45px;
+        }
+      }
+
+      .price {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        width: 33%;
+        float: right;
+        margin-top: 0;
+      }
+    }
+
+    .re_open {
+
+      .negotiate {
+
+        .button {
+
+          button {
+            float: right;
             position: relative;
-         
-            p {
-                position: absolute;
-                top: 28px;
-            }
+            top: -10px;
+          }
         }
+      }
+
+      .offer {
+
+        .submit {
+
+          button {
+            float: right;
+          }
+        }
+      }
     }
+  }
 
-    main .container {
+  footer {
 
-        .property .row {
-            margin-right: 0;
+    .collapse {
 
-            .address .row { 
+      .navbar-nav {
+        margin-top: 11px;
 
-                .text {
-                    margin-left: 45px;
-                }
-            }
-
-            .price {
-                -webkit-box-align: end;
-                -ms-flex-align: end;
-                align-items: flex-end;
-                width: 33%;
-                float: right;
-                margin-top: 0;
-            }
+        li a {
+          padding: 0px 15px;
+          border-right: 1px solid white;
         }
 
-        .re_open {
-
-            .negotiate {
-
-                .button {
-
-                    button {
-                        float: right;
-                        position: relative;
-                        top: -10px;
-                    }
-                }
-            }
-
-            .offer {
-
-                .submit {
-
-                    button {
-                        float: right;
-                    }
-                }
-            }
+        li:first-of-type a {
+          padding-left: 0 !important;
         }
+      }
     }
-
-    footer {
-
-        .collapse {
-
-            .navbar-nav {
-                margin-top: 11px;
-
-                a {
-                    padding: 0px 15px;
-                    border-right: 1px solid white;
-                }
-            }
-        }
-    }
+  }
 }
 
 @media (min-width: 992px) {
-    header .container,
-    main .container {
-        width: 901px;
+  header .container,
+  main .container,
+  footer .container {
+    width: 901px;
+  }
+
+  main .container {
+
+    .buyer-offer-response {
+
+      .buyer-offer,
+      .response {
+        width: 435px;
+      }
+
+      .buyer-offer {
+        margin-right: 30px;
+      }
     }
+  }
 
-    main .container {
+  footer {
 
-        .buyer-offer,
-        .response {
-            display: inline-block;
-            width: 38.9%;
+    .container {
+      padding: 0;
+
+      .navbar {
+
+        .container-fluid {
+
+          #myNavbar,
+          .socials {
+            display: inline-block !important;
+          }
+
+          #myNavbar {
+            width: 70%;
+          }
+
+          .socials {
+            width: 25%;
+          }
         }
-
-        .buyer-offer {
-            margin-right: 30px;
-        }
+      }
     }
-
-    footer {
-
-        .navbar {
-
-            #myNavbar,
-            .socials {
-                display: inline-block !important;
-            }
-
-            #myNavbar {
-                width: 70%;
-            }
-
-            .socials {
-                width: 25%;
-            }
-        }
-    }
+  }
 }
