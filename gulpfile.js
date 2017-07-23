@@ -73,7 +73,7 @@ gulp.task('html', () => {
 
 gulp.task('watch', ['css-libs', 'scripts'], () => {
     gulp.watch('app/sass/*', ['sass']);
-    gulp.watch('app/js/script.js', ['babel']);
+    gulp.watch('app/js/script.js', ['scripts']);
     gulp.watch('app/index.html', ['html']);
 });
 

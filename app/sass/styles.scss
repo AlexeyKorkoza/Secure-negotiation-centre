@@ -230,7 +230,7 @@ main {
 
       .buyer-offer {
         overflow: hidden;
-        width: auto;
+        width: 100%;
         padding: 25px 40px 30px 40px;
         margin: 28px 0;
         border: 1px solid #a5a5a5;
@@ -306,7 +306,7 @@ main {
         overflow: hidden;
         padding: 25px 40px 30px 40px;
         margin: 28px 0;
-        width: auto;
+        width: 100%;
         background: #e8e8e8;
         border: 2px solid #ed1c24;
         color: #ed1c24;
@@ -446,11 +446,19 @@ main {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
           margin-bottom: 16px;
 
           .pound {
             color: #979797;
-            font: 34pt $fontArialBold;
+            font: 20pt $fontArialRegular;
+          }
+
+          #incorrect_input {
+            display: none;
+            color: red;
+            font: bold 34pt $fontArialBold;
           }
 
           input {

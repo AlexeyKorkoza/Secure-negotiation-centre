@@ -127,10 +127,11 @@
                 <div class="offer row">
                     <p>Enter an offer you would be willing to accept:</p>
                     <div class="col-md-8 col-lg-8 col-sm-8 col-xs-12 input">
-                        <span class="pound">£ </span><input value="180,000" />
+                        <span class="pound">£ </span><input id="pount" value="180,000" />
+                        <span id="incorrect_input">Incorrect Input</span>
                     </div>
                     <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 submit">
-                        <button>SUBMIT OFFER</button>
+                        <button onclick="offer()">SUBMIT OFFER</button>
                     </div>     
                 </div>
                 <div class="add_comments">

@@ -19,3 +19,16 @@ spoiler.click((e) => {
     }, 500);
   }
 });
+
+function offer() {
+  const value = document.getElementById('pount').value;
+  if (value.search(/\d{1,3}(,\d{3})*(\,\d{2})?$/) === 0) {
+    const obj = {
+      'price': value
+    }
+    document.getElementById('incorrect_input').style.display = 'none';
+    console.log(obj);
+  } else {
+    document.getElementById('incorrect_input').style.display = 'block';
+  }
+}
