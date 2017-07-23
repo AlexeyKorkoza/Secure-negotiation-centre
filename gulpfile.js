@@ -13,7 +13,8 @@ const jscpd = require('gulp-jscpd');
 const rename = require('gulp-rename');
 const notify = require('gulp-notify');
 const del = require('del');
-const cssnano = require('gulp-cssnano')
+const cssnano = require('gulp-cssnano');
+const babel = require("gulp-babel");
 
 gulp.task('connect', function() {
     connect.server({
@@ -36,16 +37,23 @@ gulp.task('sass', () => {
     .pipe(connect.reload());
 });
 
-gulp.task('scripts', () => {
+gulp.task('babel', () => {
+  return gulp.src('app/js/script.js')
+    .pipe(babel())
+    .pipe(concat('script.es5.js'))
+    .pipe(gulp.dest('app/js'));
+});
+
+gulp.task('scripts', ['babel'], () => {
     return gulp.src([
         'app/libs/bootstrap.min.js',
-        'app/js/script.js'
+        'app/js/script.es5.js'
         ])
         .on('error', console.log)
         .pipe(concat('scripts.js'))
         .pipe(rename({ suffix: '.min', prefix: '' }))
-        .pipe(uglify())
-        .pipe(jscpd())
+        // .pipe(uglify())
+        // .pipe(jscpd())
         .pipe(gulp.dest('app/js'))
         .pipe(connect.reload());
 });
@@ -66,7 +74,7 @@ gulp.task('html', () => {
 
 gulp.task('watch', ['css-libs', 'scripts'], () => {
     gulp.watch('app/sass/*', ['sass']);
-    gulp.watch('app/js/*', ['scripts']);
+    gulp.watch('app/js/script.js', ['babel']);
     gulp.watch('app/index.html', ['html']);
 });
 

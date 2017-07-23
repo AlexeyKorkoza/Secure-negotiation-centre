@@ -22,11 +22,13 @@
   },
   "homepage": "https://github.com/AlexeyKorkoza/Secure-negotiation-centre#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "connect": "^3.6.2",
     "connect-livereload": "^0.6.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
     "gulp-csslint": "^1.0.0",
