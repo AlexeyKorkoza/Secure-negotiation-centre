@@ -52,8 +52,7 @@ gulp.task('scripts', ['babel'], () => {
         .on('error', console.log)
         .pipe(concat('scripts.js'))
         .pipe(rename({ suffix: '.min', prefix: '' }))
-        // .pipe(uglify())
-        // .pipe(jscpd())
+        .pipe(uglify())
         .pipe(gulp.dest('app/js'))
         .pipe(connect.reload());
 });
