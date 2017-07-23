@@ -17,3 +17,7 @@
 node_modules/
 
 dist/
+
+app/css/
+app/js/script.es5.js
+app/js/scripts.min.js
