@@ -94,6 +94,9 @@ gulp.task('build', ['clean', 'sass', 'scripts'], () => {
     var buildHtml = gulp.src('app/*.html')
         .pipe(gulp.dest('dist'));
 
+    var buildImg = gulp.src('app/img/*')
+        .pipe(gulp.dest('dist/img'));    
+
 });
 
 gulp.task('clean', () => {
