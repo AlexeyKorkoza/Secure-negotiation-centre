@@ -88,7 +88,7 @@ gulp.task('build', ['clean', 'sass', 'scripts'], () => {
     var buildFonts = gulp.src('app/fonts/*')
         .pipe(gulp.dest('dist/fonts'))
 
-    var buildJs = gulp.src('app/js/*.js')
+    var buildJs = gulp.src('app/js/scrips.min.js')
         .pipe(gulp.dest('dist/js'))
 
     var buildHtml = gulp.src('app/*.html')
